@@ -1,0 +1,48 @@
+基本命令介绍
+创建本地仓库 git init      添加 git add 文件名      提交 git commit -m'起名'       回滚 git reset --hard ID
+分支
+创建分支 git branch  分支名称    删除分支   git  -d  branch 分支名称    切换分支  git checkout  名称
+合并分支 git merge 名称       变基分支  git rebase  名称
+优选  git cherry-pick  (commit id)//id 单独合并一个提交
+clear 清屏    git status 查看当前状态       git log --oneline  -graph -all  查看提交记录、分支
+git show ID              ls  查看有多少文件     ls  -a  可查看隐藏文件         ls -l   查看修改
+ls -al 查看所有修改（包隐）    pwd 查看当前目录在哪一个位置     mkdir   名  创建文件夹
+cd  名 进入文件夹      cd ..  回去     cd_回到上次目录     cd  .  当前目录       ls ..  获上一级目录
+ls  ../..   上一级的上一级目录       cat_   显示文件内容     vi_ 手动编辑
+
+IDEA
+project 项目   module 模块   package 包    class 类
+项目和模块操作
+相关类操作
+• 新建类
+• 删除类
+• 修改类名
+
+关于模块操作
+
+• 新建模块
+• 删除模块
+• 修改模块
+• 导入模块
+
+关于项目操作
+• 关闭项目
+• 新建项目
+• 打开项目
+• 修改项目
+ 
+远程仓库远程账户认证和推送
+git remote add 名称 远程仓库地址
+git push 远程仓库名称  本地分支名称[：远端分支名称]     推送需要创建Token
+ssh
+ssh- keygen -t  rsa
+cat ~/.ssh/github.pub
+可将远端和本地的分支进行绑定，绑定后就不用指定分支名称
+git push --set-upstream 远程仓库名称 master:master
+
+git push 远程仓库名称  .推送（每次变都需推送）
+克隆项目
+远程仓库进行同步克隆 （code地址 ） git clone.
+抓取，拉取和冲突解决
+抓取git fetch origin 后合并 git merge origin/master
+抓取十合并  git pull origin
